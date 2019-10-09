@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = MainActivity.class.getName();
     ListView listView;
     String[] listItems;
-    private String url = "http://employeee.dx.am/api/getDataEmployee.php?view=json";
+    private String url = "http://didik.atwebpages.com/api/getMKPilihan.php?view=json";
     private RequestQueue mRequestQueue;
     private StringRequest mStringRequest;
 
@@ -90,17 +90,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void parseJSON(String data){
-
+        Log.d("data",data);
         try{
-            JSONArray jsonMainNode = new JSONArray(data);
-
-            int jsonArrLength = jsonMainNode.length();
-
-            for(int i=0; i < jsonArrLength; i++) {
-                JSONObject jsonChildNode = jsonMainNode.getJSONObject(i);
-                String first_name = jsonChildNode.getString("first_name");
-                String last_name = jsonChildNode.getString("last_name");
-                employeeList.add(first_name+" "+last_name);
+            JSONObject json = new JSONObject(data);
+            if (json.getString("msg").equalsIgnoreCase("success")) {
+                JSONArray dataNode=json.getJSONArray("data");
+                int jsonArrLength = dataNode.length();
+                for (int i = 0; i < jsonArrLength; i++) {
+                    JSONObject jsonChildNode = dataNode.getJSONObject(i);
+                    String kode_mk = jsonChildNode.getString("kode_mk");
+                    String nama_mk = jsonChildNode.getString("nama_mk");
+                    employeeList.add(kode_mk + " " + nama_mk);
+                }
             }
 
             // Get ListView object from xml

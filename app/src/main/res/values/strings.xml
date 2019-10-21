@@ -15,4 +15,6 @@
         <item>.Net</item>
         <item>Perl</item>
     </string-array>
+    <string name="title_activity_input">Input Data Mata Kuliah</string>
+    <string name="textKodeMK">Kode Mata Kuliah</string>
 </resources>

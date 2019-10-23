@@ -1,5 +1,6 @@
 package id.ac.unila.ilkom.mkpilihan;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -26,6 +27,8 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
+import static android.app.PendingIntent.getActivity;
+
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = MainActivity.class.getName();
     ListView listView;
@@ -47,6 +50,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 sendAndRequestResponse();
+            }
+        });
+
+        FloatingActionButton addEmp = findViewById(R.id.addEmp);
+        addEmp.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(), InputActivity.class);
+                startActivity(intent);
             }
         });
 

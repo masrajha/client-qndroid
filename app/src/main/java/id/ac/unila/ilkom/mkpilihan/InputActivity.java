@@ -72,7 +72,8 @@ public class InputActivity extends AppCompatActivity {
                     Log.d("Response", response);
                     try{
                         JSONObject res = new JSONObject(response);
-                        Snackbar.make(view, res.getString("msg"), Snackbar.LENGTH_LONG)
+                        String msg = (res.getString("msg").equalsIgnoreCase("success")?"Data Berhasil disimpan":res.getString("msg"));
+                        Snackbar.make(view, msg, Snackbar.LENGTH_LONG)
                                 .setAction("Action", null).show();
                     } catch (Exception e){
                         Snackbar.make(view, e.getMessage(), Snackbar.LENGTH_LONG)

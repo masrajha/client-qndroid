@@ -80,7 +80,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.042"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/semester"
+        app:layout_constraintTop_toBottomOf="@+id/spSemester"
         app:layout_constraintVertical_bias="0.053" />
 
     <TextView
@@ -94,7 +94,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.041"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText"
+        app:layout_constraintTop_toBottomOf="@+id/edSKS"
         app:layout_constraintVertical_bias="0.072" />
 
     <TextView
@@ -108,7 +108,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.041"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/kuota"
+        app:layout_constraintTop_toBottomOf="@+id/edKuota"
         app:layout_constraintVertical_bias="0.108" />
 
     <EditText
@@ -128,7 +128,7 @@
         app:layout_constraintVertical_bias="0.02" />
 
     <EditText
-        android:id="@+id/edNamaMK2"
+        android:id="@+id/edDosen"
         android:layout_width="317dp"
         android:layout_height="51dp"
         android:autofillHints=""
@@ -144,7 +144,7 @@
         app:layout_constraintVertical_bias="0.175" />
 
     <Spinner
-        android:id="@+id/semester"
+        android:id="@+id/spSemester"
         android:layout_width="107dp"
         android:layout_height="56dp"
         android:layout_marginBottom="84dp"
@@ -160,7 +160,7 @@
         app:layout_constraintVertical_bias="0.032" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/edSKS"
         android:layout_width="89dp"
         android:layout_height="46dp"
         android:ems="10"
@@ -173,7 +173,7 @@
         app:layout_constraintVertical_bias="0.037" />
 
     <EditText
-        android:id="@+id/kuota"
+        android:id="@+id/edKuota"
         android:layout_width="89dp"
         android:layout_height="46dp"
         android:ems="10"
